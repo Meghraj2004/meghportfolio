@@ -91,7 +91,7 @@ const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 bg-gradient-to-b from-background to-background-surface">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -100,15 +100,18 @@ const ContactSection: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold text-white mb-4 text-center">Get In Touch</h2>
-          <p className="text-gray-400 mb-12 text-center max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4 text-center relative inline-block">
+            <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary-light rounded-full"></span>
+            Get In Touch
+          </h2>
+          <p className="text-gray-400 mb-12 text-center max-w-2xl mx-auto mt-6">
             I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
           </p>
         </motion.div>
         
-        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div 
-            className="col-span-1 md:col-span-2"
+            className="col-span-1 md:col-span-2 bg-background-card p-8 rounded-2xl shadow-lg border border-gray-800"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -121,14 +124,15 @@ const ContactSection: React.FC = () => {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-300">Your Name</FormLabel>
+                      <FormLabel className="text-gray-200 text-lg">Your Name</FormLabel>
                       <FormControl>
                         <Input 
                           {...field}
-                          className="bg-background-card border border-gray-700 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-primary-light" 
+                          className="bg-background-surface border border-gray-700 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-primary-light focus:border-primary-light h-12" 
+                          placeholder="Enter your name"
                         />
                       </FormControl>
-                      <FormMessage />
+                      <FormMessage className="text-red-400" />
                     </FormItem>
                   )}
                 />
@@ -138,15 +142,16 @@ const ContactSection: React.FC = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-300">Email Address</FormLabel>
+                      <FormLabel className="text-gray-200 text-lg">Email Address</FormLabel>
                       <FormControl>
                         <Input 
                           {...field}
                           type="email" 
-                          className="bg-background-card border border-gray-700 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-primary-light" 
+                          className="bg-background-surface border border-gray-700 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-primary-light focus:border-primary-light h-12" 
+                          placeholder="Enter your email"
                         />
                       </FormControl>
-                      <FormMessage />
+                      <FormMessage className="text-red-400" />
                     </FormItem>
                   )}
                 />
@@ -156,15 +161,16 @@ const ContactSection: React.FC = () => {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-300">Message</FormLabel>
+                      <FormLabel className="text-gray-200 text-lg">Message</FormLabel>
                       <FormControl>
                         <Textarea 
                           {...field}
                           rows={5}
-                          className="bg-background-card border border-gray-700 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-primary-light resize-none" 
+                          className="bg-background-surface border border-gray-700 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-primary-light focus:border-primary-light resize-none" 
+                          placeholder="Your message here..."
                         />
                       </FormControl>
-                      <FormMessage />
+                      <FormMessage className="text-red-400" />
                     </FormItem>
                   )}
                 />
@@ -172,7 +178,7 @@ const ContactSection: React.FC = () => {
                 <Button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full bg-primary-DEFAULT hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                  className="w-full bg-primary-DEFAULT hover:bg-primary-dark text-white font-medium py-4 px-6 rounded-lg transition-colors text-lg shadow-md hover:shadow-lg transform hover:-translate-y-1"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
@@ -188,14 +194,22 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             {contactInfo.map((info, index) => (
-              <div key={index} className="bg-background-surface p-6 rounded-xl border border-gray-800">
+              <div 
+                key={index} 
+                className="bg-background-card p-6 rounded-xl border border-gray-800 hover:border-primary-light/50 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
                 <div className="flex items-start">
-                  <div className="bg-primary-DEFAULT/20 p-3 rounded-lg mr-4">
+                  <div className="bg-primary-DEFAULT/20 p-3 rounded-lg mr-4 shadow-inner">
                     {info.icon}
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white">{info.title}</h3>
-                    <a href={info.href} className="text-primary-light hover:underline">{info.value}</a>
+                    <h3 className="text-xl font-bold text-white mb-1">{info.title}</h3>
+                    <a 
+                      href={info.href} 
+                      className="text-primary-light hover:underline text-lg transition-colors duration-300 hover:text-primary-DEFAULT"
+                    >
+                      {info.value}
+                    </a>
                   </div>
                 </div>
               </div>

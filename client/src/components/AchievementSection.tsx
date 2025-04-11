@@ -24,7 +24,7 @@ const AchievementSection: React.FC = () => {
     {
       title: "2nd Runner-Up, Avinya Hackathons",
       period: "2024, 2025",
-      description: "Recognized for innovative solution development in competitive hackathon environments.",
+      description: "Recognized for innovative solution development in competitive hackathon environments. Designed and implemented a cutting-edge solution that impressed judges.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -36,7 +36,7 @@ const AchievementSection: React.FC = () => {
     {
       title: "Participant, VCET Hackathon",
       period: "2024",
-      description: "Developed and presented technical solutions under tight deadlines in a collaborative team environment.",
+      description: "Developed and presented technical solutions under tight deadlines in a collaborative team environment. Created innovative software for real-world problems.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -44,6 +44,30 @@ const AchievementSection: React.FC = () => {
       ),
       bgColor: "bg-blue-500/20",
       textColor: "text-blue-500"
+    },
+    {
+      title: "Smart India Hackathon Finalist",
+      period: "2023",
+      description: "Selected as a finalist in Smart India Hackathon, presenting an innovative solution for smart city infrastructure management and optimization.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
+      bgColor: "bg-red-500/20",
+      textColor: "text-red-500"
+    },
+    {
+      title: "Certificate of Excellence, CodeFest",
+      period: "2023",
+      description: "Awarded for exceptional problem-solving skills and innovative programming solutions in the annual CodeFest competition.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+      ),
+      bgColor: "bg-purple-500/20",
+      textColor: "text-purple-500"
     }
   ];
 
@@ -51,7 +75,7 @@ const AchievementSection: React.FC = () => {
     {
       title: "Python, JavaScript, Bootstrap 4",
       provider: "Infosys",
-      description: "Core web development technologies certification covering fundamentals and advanced concepts.",
+      description: "Core web development technologies certification covering fundamentals and advanced concepts for modern application development.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -63,7 +87,7 @@ const AchievementSection: React.FC = () => {
     {
       title: "AWS Cloud Architecting",
       provider: "Amazon Web Services",
-      description: "Designing scalable, reliable, and secure cloud infrastructure on AWS platform.",
+      description: "Designing scalable, reliable, and secure cloud infrastructure on AWS platform. Implementation of best practices for cloud architecture.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -75,7 +99,7 @@ const AchievementSection: React.FC = () => {
     {
       title: "Google Cloud Skills Boost",
       provider: "Google Cloud",
-      description: "Comprehensive training in Google Cloud Platform services and solutions architecture.",
+      description: "Comprehensive training in Google Cloud Platform services and solutions architecture. Implementation of best practices for cloud computing.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
@@ -83,6 +107,42 @@ const AchievementSection: React.FC = () => {
       ),
       bgColor: "bg-blue-500/20",
       textColor: "text-blue-500"
+    },
+    {
+      title: "React & Node.js Development",
+      provider: "Udemy",
+      description: "Advanced web application development using React.js and Node.js frameworks. Building modern, responsive single-page applications.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+      ),
+      bgColor: "bg-teal-500/20",
+      textColor: "text-teal-500"
+    },
+    {
+      title: "Database Design & SQL Mastery",
+      provider: "Microsoft",
+      description: "Comprehensive training in database design principles, normalization, and advanced SQL for efficient data management and retrieval.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+        </svg>
+      ),
+      bgColor: "bg-indigo-500/20",
+      textColor: "text-indigo-500"
+    },
+    {
+      title: "UI/UX Design Fundamentals",
+      provider: "Coursera",
+      description: "Principles of user interface and experience design for creating intuitive, accessible, and aesthetically pleasing digital products.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      ),
+      bgColor: "bg-pink-500/20",
+      textColor: "text-pink-500"
     }
   ];
 
@@ -111,18 +171,37 @@ const AchievementSection: React.FC = () => {
   };
 
   return (
-    <section id="achievements" className="py-20 bg-background-surface">
+    <section id="achievements" className="py-20 bg-gradient-to-b from-background to-background-surface">
       <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold text-white mb-4 text-center relative inline-block">
+            <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary-light rounded-full"></span>
+            Qualifications
+          </h2>
+          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+            My achievements and professional certifications that demonstrate my expertise and commitment to continuous learning.
+          </p>
+        </motion.div>
+        
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/2">
             <motion.h2 
-              className="text-3xl font-bold text-white mb-6 relative"
+              className="text-3xl font-bold text-white mb-6 relative inline-flex items-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className="bg-primary-light h-1 w-12 absolute -top-3 left-0"></span>
+              <span className="bg-gradient-to-r from-primary-light to-primary-DEFAULT h-1 w-12 absolute -bottom-2 left-0"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary-light mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
               Achievements
             </motion.h2>
             
@@ -136,16 +215,16 @@ const AchievementSection: React.FC = () => {
               {achievements.map((achievement, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-background-card rounded-xl p-6 border border-gray-800"
+                  className="bg-background-card rounded-xl p-6 border border-gray-800 hover:border-primary-light/50 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
                   variants={itemVariants}
                 >
                   <div className="flex items-start">
-                    <div className={`${achievement.bgColor} p-3 rounded-lg mr-4`}>
+                    <div className={`${achievement.bgColor} p-3 rounded-lg mr-4 shadow-inner`}>
                       {achievement.icon}
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white">{achievement.title}</h3>
-                      <p className="text-primary-light">{achievement.period}</p>
+                      <h3 className="text-xl font-bold text-white">{achievement.title}</h3>
+                      <p className="text-primary-light font-medium">{achievement.period}</p>
                       <div className="mt-2 text-gray-400">{achievement.description}</div>
                     </div>
                   </div>
@@ -156,13 +235,16 @@ const AchievementSection: React.FC = () => {
           
           <div className="lg:w-1/2">
             <motion.h2 
-              className="text-3xl font-bold text-white mb-6 relative"
+              className="text-3xl font-bold text-white mb-6 relative inline-flex items-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className="bg-primary-light h-1 w-12 absolute -top-3 left-0"></span>
+              <span className="bg-gradient-to-r from-primary-light to-primary-DEFAULT h-1 w-12 absolute -bottom-2 left-0"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary-light mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
               Certifications
             </motion.h2>
             
@@ -176,16 +258,16 @@ const AchievementSection: React.FC = () => {
               {certifications.map((certification, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-background-card rounded-xl p-6 border border-gray-800"
+                  className="bg-background-card rounded-xl p-6 border border-gray-800 hover:border-primary-light/50 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
                   variants={itemVariants}
                 >
                   <div className="flex items-start">
-                    <div className={`${certification.bgColor} p-3 rounded-lg mr-4`}>
+                    <div className={`${certification.bgColor} p-3 rounded-lg mr-4 shadow-inner`}>
                       {certification.icon}
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white">{certification.title}</h3>
-                      <p className="text-primary-light">{certification.provider}</p>
+                      <h3 className="text-xl font-bold text-white">{certification.title}</h3>
+                      <p className="text-primary-light font-medium">{certification.provider}</p>
                       <div className="mt-2 text-gray-400">{certification.description}</div>
                     </div>
                   </div>
