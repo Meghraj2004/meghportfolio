@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import nodemailer from "nodemailer";
+import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // prefix all routes with /api
@@ -35,6 +36,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error('Error processing contact form:', error);
       return res.status(500).json({ message: 'Something went wrong. Please try again later.' });
     }
+  });
+
+  // Serve resume file from public directory
+  app.get('/assets/MegharajDandgavhal_Resume.pdf', (req, res) => {
+    const resumePath = path.join(process.cwd(), "public", "assets", "MegharajDandgavhal_Resume.pdf");
+    console.log('Serving resume from:', resumePath);
+    res.sendFile(resumePath);
   });
 
   const httpServer = createServer(app);
