@@ -10,4 +10,57 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+  
+  /* Custom cursor styles */
+  body {
+    cursor: none;
+  }
+  
+  .cursor-dot,
+  .cursor-outline {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(59, 130, 246);
+    transition: width 0.15s ease-in-out, height 0.15s ease-in-out;
+  }
+  
+  .cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(59, 130, 246, 0.5);
+    transition: all 0.25s ease-in-out;
+  }
+  
+  a, button, [role="button"], input, textarea, select, 
+  [tabindex]:not([tabindex="-1"]) {
+    cursor: none !important;
+  }
+  
+  a:hover ~ .cursor-dot,
+  button:hover ~ .cursor-dot,
+  [role="button"]:hover ~ .cursor-dot {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+  }
+  
+  a:hover ~ .cursor-outline,
+  button:hover ~ .cursor-outline,
+  [role="button"]:hover ~ .cursor-outline {
+    width: 60px;
+    height: 60px;
+    border-color: transparent;
+    background-color: rgba(59, 130, 246, 0.2);
+  }
 }

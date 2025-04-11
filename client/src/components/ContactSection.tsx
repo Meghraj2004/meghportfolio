@@ -36,10 +36,12 @@ const ContactSection: React.FC = () => {
   const { submit: submitWeb3Form } = useWeb3Forms({
     access_key: 'e99b466d-e31a-4dfe-9e20-188a24f69b8c',
     settings: {
-      from_name: 'Portfolio Contact Form',
-      subject: 'New Contact Message from Portfolio Website'
+      from_name: 'Megharaj Portfolio Contact',
+      subject: 'New Contact Form Submission',
+      to_email: 'megharajdandgavhal2004@gmail.com' // Make sure emails go to your email
     },
-    onSuccess: (successMessage, data) => {
+    onSuccess: (successMessage) => {
+      console.log("Form submitted successfully", successMessage);
       toast({
         title: "Message sent successfully!",
         description: "Thank you for your message. I'll get back to you soon.",
@@ -48,7 +50,8 @@ const ContactSection: React.FC = () => {
       form.reset();
       setIsSubmitting(false);
     },
-    onError: (errorMessage, data) => {
+    onError: (errorMessage) => {
+      console.error("Error submitting form:", errorMessage);
       toast({
         title: "Error",
         description: "There was a problem sending your message. Please try again.",
@@ -62,13 +65,17 @@ const ContactSection: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      await submitWeb3Form({
-        name: data.name,
-        email: data.email,
-        subject: data.subject,
-        message: data.message
-      });
+      const formData = {
+        ...data,
+        access_key: 'e99b466d-e31a-4dfe-9e20-188a24f69b8c',
+        from_name: data.name,
+        botcheck: '',
+      };
+      
+      console.log("Submitting form with data:", formData);
+      await submitWeb3Form(formData);
     } catch (error) {
+      console.error("Error in form submission:", error);
       toast({
         title: "Error",
         description: "There was a problem sending your message. Please try again.",
@@ -269,23 +276,23 @@ const ContactSection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="mb-6 flex items-center p-3 bg-background-surface rounded-xl border border-gray-700 relative overflow-hidden group">
+              <div className="mb-6 p-3 bg-background-surface rounded-xl border border-gray-700 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-light/5 to-primary-DEFAULT/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
-                <div className="relative z-10 flex items-center">
-                  <div className="flex-shrink-0 bg-gradient-to-br from-primary-light to-primary-DEFAULT rounded-full p-1 mr-4 shadow-lg overflow-hidden">
+                <div className="relative z-10 flex flex-col sm:flex-row items-center">
+                  <div className="flex-shrink-0 bg-gradient-to-br from-primary-light to-primary-DEFAULT rounded-full p-1 mb-3 sm:mb-0 sm:mr-4 shadow-lg overflow-hidden">
                     <div className="bg-gray-900 rounded-full w-16 h-16 flex items-center justify-center overflow-hidden">
                       <svg className="h-14 w-14 text-primary-light" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
                   </div>
-                  <div>
+                  <div className="text-center sm:text-left">
                     <h3 className="text-xl font-bold text-white">Megharaj Dandgavhal</h3>
                     <p className="text-primary-light">Frontend Developer</p>
                     <div className="text-gray-400 text-sm mt-1">Available for Freelance & Full-time Opportunities</div>
                   </div>
                 </div>
-                <div className="absolute bottom-0 right-0 h-2 w-full bg-gradient-to-r from-primary-light to-primary-DEFAULT"></div>
+                <div className="absolute bottom-0 left-0 h-2 w-full bg-gradient-to-r from-primary-light to-primary-DEFAULT"></div>
               </div>
               
               <div className="space-y-6">
