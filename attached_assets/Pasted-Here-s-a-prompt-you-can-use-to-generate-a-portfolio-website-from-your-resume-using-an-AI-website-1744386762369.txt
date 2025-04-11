@@ -1,0 +1,69 @@
+Here’s a prompt you can use to generate a **portfolio website** from your resume using an AI website builder, such as GPT-based code generation tools or design platforms like V0.dev, Framer, or even directly with HTML/CSS/React:
+
+---
+
+### 🔧 Portfolio Website Prompt Based on Resume:
+
+**Prompt:**
+
+> Create a modern, responsive personal portfolio website for *Megharaj Dandgavhal*, a B.Tech Information Technology student at Walchand Institute of Technology, Solapur.  
+> 
+> The website should include the following sections:
+> 
+> **1. Hero Section**  
+> - Name: Megharaj Dandgavhal  
+> - Location: Jalgaon, Maharashtra, India  
+> - Contact: +91-9421612110 | megharajdandgavhal2004@gmail.com  
+> - Social Links:  
+>   - [LinkedIn](https://www.linkedin.com/in/megharaj-dandgavhal-832683259/)  
+>   - [GitHub](https://github.com/Meghraj2004)  
+>   - [HackerRank](https://www.hackerrank.com/profile/megharajdandgav1)  
+>   - [Portfolio](https://meghportfolio.vercel.app/)  
+>
+> **2. About Me / Objective Section**  
+> - A brief paragraph about Megharaj's goal in software development, aiming to contribute to real-world projects in e-commerce, security, and disaster response systems.  
+> 
+> **3. Education Section**  
+> - B.Tech (IT), Walchand Institute of Technology – CGPA: 8.46  
+> - HSC, Gram Vikas Vidyalaya – 73.83%  
+> 
+> **4. Skills Section**  
+> - Languages: Python, JavaScript, HTML, CSS  
+> - Frameworks: React, Node.js, Express.js, Vite, Bootstrap, Next.js, Spring Boot  
+> - Databases: MySQL, MongoDB  
+> - Tools: VS Code, Android Studio, PyCharm  
+> - Concepts: DSA, REST APIs, DBMS, Data Science, Android  
+> 
+> **5. Experience Section**  
+> - *Web Developer Intern at Pinnacle Labs* (June–August 2024): Contributed to front-end UI and REST API integration using Node.js and MySQL.  
+> 
+> **6. Projects Section** (each with title, stack, and summary):  
+> - MensFyt (React, Node.js, MySQL): E-commerce for men’s fashion with personalized recommendations  
+> - Graphical Password Authentication (HTML, CSS, JS, PHP, MySQL): Enhanced security using image/color/alphanumeric login  
+> - Restaurant Reservation System (React, Node.js): Real-time reservation with MySQL backend  
+> - Disaster Response Platform (Spring Boot): Real-time shelter/volunteer coordination  
+> 
+> **7. Achievements Section**  
+> - 2nd Runner-Up, Avinya Hackathons (2024, 2025)  
+> - Participant, VCET Hackathon (2024)  
+> 
+> **8. Certifications Section**  
+> - Python, JavaScript, Bootstrap 4 – Infosys  
+> - AWS Cloud Architecting  
+> - Google Cloud Skills Boost  
+> 
+> **9. Contact Form Section**  
+> - Simple form with fields: Name, Email, Message  
+> 
+> **10. Footer Section**  
+> - Include copyright, social links, and “Made with ❤️ by Megharaj”  
+> 
+> **Design Preferences**  
+> - Clean, dark or minimal light theme  
+> - Responsive design  
+> - Use Tailwind CSS or Bootstrap for styling  
+> - Add animations on scroll if possible  
+
+---
+
+Would you like me to generate a sample React/HTML template based on this?
