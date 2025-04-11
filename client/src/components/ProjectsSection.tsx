@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 interface Project {
   title: string;
   description: string;
+  role: string;
   tags: Array<{
     name: string;
     color: string;
@@ -17,10 +18,12 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'MensFyt',
       description: 'E-commerce platform specialized for men\'s fashion with personalized recommendations, smart filtering, and an intuitive shopping experience.',
+      role: 'Frontend Developer - Designed and implemented responsive user interface components using React, managed state with Redux, and created custom product filtering and recommendation system.',
       tags: [
         { name: 'React', color: 'text-blue-400', bgColor: 'bg-blue-500/20' },
-        { name: 'Node.js', color: 'text-green-400', bgColor: 'bg-green-500/20' },
-        { name: 'MySQL', color: 'text-blue-400', bgColor: 'bg-blue-500/20' }
+        { name: 'Redux', color: 'text-purple-400', bgColor: 'bg-purple-500/20' },
+        { name: 'TailwindCSS', color: 'text-cyan-400', bgColor: 'bg-cyan-500/20' },
+        { name: 'REST API', color: 'text-green-400', bgColor: 'bg-green-500/20' }
       ],
       image: (
         <svg width="100%" height="100%" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
@@ -38,12 +41,12 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'Graphical Password Authentication',
       description: 'Enhanced security system using image/color/alphanumeric based login mechanisms to prevent common password vulnerabilities.',
+      role: 'Frontend Developer - Built interactive authentication interface with drag-and-drop functionality, color selection mechanism, and pattern recognition features using vanilla JavaScript.',
       tags: [
-        { name: 'HTML', color: 'text-orange-400', bgColor: 'bg-orange-500/20' },
-        { name: 'CSS', color: 'text-blue-400', bgColor: 'bg-blue-500/20' },
+        { name: 'HTML5', color: 'text-orange-400', bgColor: 'bg-orange-500/20' },
+        { name: 'CSS3', color: 'text-blue-400', bgColor: 'bg-blue-500/20' },
         { name: 'JavaScript', color: 'text-yellow-400', bgColor: 'bg-yellow-500/20' },
-        { name: 'PHP', color: 'text-purple-400', bgColor: 'bg-purple-500/20' },
-        { name: 'MySQL', color: 'text-blue-400', bgColor: 'bg-blue-500/20' }
+        { name: 'Responsive Design', color: 'text-pink-400', bgColor: 'bg-pink-500/20' }
       ],
       image: (
         <svg width="100%" height="100%" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
@@ -61,11 +64,13 @@ const ProjectsSection: React.FC = () => {
     },
     {
       title: 'Restaurant Reservation System',
-      description: 'Real-time reservation platform allowing customers to book tables with integrated MySQL backend for restaurant management.',
+      description: 'Real-time reservation platform allowing customers to book tables with integrated calendar and live availability updates.',
+      role: 'Frontend Developer - Developed interactive seat selection interface, implemented real-time availability updates with WebSockets, and created custom date/time picker component.',
       tags: [
         { name: 'React', color: 'text-blue-400', bgColor: 'bg-blue-500/20' },
-        { name: 'Node.js', color: 'text-green-400', bgColor: 'bg-green-500/20' },
-        { name: 'MySQL', color: 'text-blue-400', bgColor: 'bg-blue-500/20' }
+        { name: 'TypeScript', color: 'text-blue-500', bgColor: 'bg-blue-600/20' },
+        { name: 'WebSockets', color: 'text-purple-400', bgColor: 'bg-purple-500/20' },
+        { name: 'Styled Components', color: 'text-pink-400', bgColor: 'bg-pink-500/20' }
       ],
       image: (
         <svg width="100%" height="100%" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
@@ -84,11 +89,13 @@ const ProjectsSection: React.FC = () => {
     },
     {
       title: 'Disaster Response Platform',
-      description: 'Real-time platform for coordinating shelters and volunteers during emergency situations with resource management capabilities.',
+      description: 'Real-time platform for coordinating shelters and volunteers during emergency situations with interactive mapping and resource management.',
+      role: 'Frontend Developer - Created interactive mapping system with real-time updates, implemented data visualization for resource allocation, and built responsive volunteer coordination dashboard.',
       tags: [
-        { name: 'Spring Boot', color: 'text-green-400', bgColor: 'bg-green-500/20' },
-        { name: 'MySQL', color: 'text-blue-400', bgColor: 'bg-blue-500/20' },
-        { name: 'JavaScript', color: 'text-yellow-400', bgColor: 'bg-yellow-500/20' }
+        { name: 'React', color: 'text-blue-400', bgColor: 'bg-blue-500/20' },
+        { name: 'Leaflet Maps', color: 'text-green-400', bgColor: 'bg-green-500/20' },
+        { name: 'D3.js', color: 'text-orange-400', bgColor: 'bg-orange-500/20' },
+        { name: 'Material UI', color: 'text-cyan-400', bgColor: 'bg-cyan-500/20' }
       ],
       image: (
         <svg width="100%" height="100%" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
@@ -130,7 +137,7 @@ const ProjectsSection: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 bg-gradient-to-b from-background to-background-surface">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -139,9 +146,12 @@ const ProjectsSection: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold text-white mb-4 text-center">My Projects</h2>
-          <p className="text-gray-400 mb-12 text-center max-w-2xl mx-auto">
-            Here are some of the projects I've worked on to solve real-world problems.
+          <h2 className="text-4xl font-bold text-white mb-4 text-center relative inline-block">
+            <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary-light rounded-full"></span>
+            Frontend Development Projects
+          </h2>
+          <p className="text-gray-400 mb-12 text-center max-w-2xl mx-auto mt-6">
+            As a frontend developer, I've created engaging user interfaces and interactive experiences for various applications. Here are some highlighted projects:
           </p>
         </motion.div>
         
@@ -166,6 +176,14 @@ const ProjectsSection: React.FC = () => {
                 <p className="text-gray-400 mb-4">
                   {project.description}
                 </p>
+                
+                <div className="mb-4 bg-background-card p-3 rounded-lg border-l-4 border-primary-light">
+                  <p className="text-primary-light font-medium text-sm mb-1">MY ROLE</p>
+                  <p className="text-gray-300 text-sm">
+                    {project.role}
+                  </p>
+                </div>
+                
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tagIndex) => (
                     <span key={tagIndex} className={`px-3 py-1 ${tag.bgColor} ${tag.color} rounded-full text-sm`}>
