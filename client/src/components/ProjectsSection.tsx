@@ -165,19 +165,19 @@ const ProjectsSection: React.FC = () => {
           {projects.map((project, index) => (
             <motion.div 
               key={index}
-              className="project-card bg-background-surface rounded-xl overflow-hidden border border-gray-800 transition-all duration-300 hover:transform hover:translate-y-[-5px] hover:shadow-lg"
+              className="project-card bg-background-surface rounded-xl overflow-hidden border border-gray-800 card-hover"
               variants={itemVariants}
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden img-zoom">
                 {project.image}
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-2 hover:text-primary-light transition-colors duration-300">{project.title}</h3>
                 <p className="text-gray-400 mb-4">
                   {project.description}
                 </p>
                 
-                <div className="mb-4 bg-background-card p-3 rounded-lg border-l-4 border-primary-light">
+                <div className="mb-4 bg-background-card p-3 rounded-lg border-l-4 border-primary-light hover-lift">
                   <p className="text-primary-light font-medium text-sm mb-1">MY ROLE</p>
                   <p className="text-gray-300 text-sm">
                     {project.role}
@@ -186,15 +186,18 @@ const ProjectsSection: React.FC = () => {
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className={`px-3 py-1 ${tag.bgColor} ${tag.color} rounded-full text-sm`}>
+                    <span 
+                      key={tagIndex} 
+                      className={`px-3 py-1 ${tag.bgColor} ${tag.color} rounded-full text-sm transition-all duration-300 hover:scale-110 hover:shadow-md cursor-default`}
+                    >
                       {tag.name}
                     </span>
                   ))}
                 </div>
                 <div className="flex justify-end">
-                  <a href="#" className="text-primary-light font-medium hover:underline inline-flex items-center">
+                  <a href="#" className="btn-pulse text-primary-light font-medium hover:underline inline-flex items-center group transition-all duration-300">
                     View Project
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </a>

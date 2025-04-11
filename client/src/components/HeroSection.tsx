@@ -16,10 +16,10 @@ const HeroSection: React.FC = () => {
               B.Tech Information Technology Student
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Hi, I'm <span className="text-primary-light">Megharaj Dandgavhal</span>
+              Hi, I'm <span className="text-primary-light text-shimmer">Megharaj Dandgavhal</span>
             </h1>
             <p className="text-xl text-gray-400 mb-8 max-w-2xl">
-              Passionate about software development and creating innovative solutions for real-world problems.
+              Passionate about <span className="text-primary-light font-medium border-glow px-2 py-1 rounded-md">frontend development</span> and creating interactive web experiences.
             </p>
             
             <div className="flex items-center space-x-4 mb-8">
@@ -109,13 +109,14 @@ const HeroSection: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary-light shadow-lg">
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary-light shadow-lg floating">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/10 to-primary-DEFAULT/20 transform hover:scale-110 transition-transform duration-700"></div>
                 <svg 
                   width="100%" 
                   height="100%" 
                   viewBox="0 0 100 100" 
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-full h-full object-cover bg-gray-700"
+                  className="w-full h-full object-cover bg-gray-700 relative z-10"
                 >
                   <title>Professional Headshot</title>
                   <rect width="100" height="100" fill="#374151" />
@@ -123,10 +124,15 @@ const HeroSection: React.FC = () => {
                   <path d="M25,90 C25,65 75,65 75,90" fill="#6B7280" />
                 </svg>
               </div>
-              <div className="absolute -bottom-5 -right-5 bg-background-surface p-3 rounded-full border-2 border-primary-light">
+              <div className="absolute -bottom-5 -right-5 bg-background-surface p-3 rounded-full border-2 border-primary-light hover-lift border-glow">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div className="absolute -top-4 -left-4 p-3 rounded-full bg-background-surface border-2 border-primary-light hover-lift btn-pulse">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
                 </svg>
               </div>
             </div>

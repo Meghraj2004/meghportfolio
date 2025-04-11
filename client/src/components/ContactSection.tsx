@@ -225,7 +225,7 @@ const ContactSection: React.FC = () => {
                 <Button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="relative w-full bg-primary-DEFAULT hover:bg-primary-dark text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 text-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 group overflow-hidden"
+                  className="relative w-full bg-primary-DEFAULT hover:bg-primary-dark text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 text-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 group overflow-hidden btn-pulse border-glow"
                 >
                   <span className="relative z-10 flex items-center justify-center">
                     {isSubmitting ? (
@@ -234,12 +234,12 @@ const ContactSection: React.FC = () => {
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        Sending...
+                        <span className="text-shimmer">Sending...</span>
                       </>
                     ) : (
                       <>
-                        Send Message
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <span className="group-hover:text-shimmer transition-all duration-500">Send Message</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
                       </>
@@ -276,10 +276,10 @@ const ContactSection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="mb-6 p-3 bg-background-surface rounded-xl border border-gray-700 relative overflow-hidden group">
+              <div className="mb-6 p-3 bg-background-surface rounded-xl border border-gray-700 relative overflow-hidden group border-glow">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-light/5 to-primary-DEFAULT/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
                 <div className="relative z-10 flex flex-col sm:flex-row items-center">
-                  <div className="flex-shrink-0 bg-gradient-to-br from-primary-light to-primary-DEFAULT rounded-full p-1 mb-3 sm:mb-0 sm:mr-4 shadow-lg overflow-hidden">
+                  <div className="flex-shrink-0 bg-gradient-to-br from-primary-light to-primary-DEFAULT rounded-full p-1 mb-3 sm:mb-0 sm:mr-4 shadow-lg overflow-hidden floating">
                     <div className="bg-gray-900 rounded-full w-16 h-16 flex items-center justify-center overflow-hidden">
                       <svg className="h-14 w-14 text-primary-light" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -288,7 +288,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div className="text-center sm:text-left">
                     <h3 className="text-xl font-bold text-white">Megharaj Dandgavhal</h3>
-                    <p className="text-primary-light">Frontend Developer</p>
+                    <p className="text-primary-light text-shimmer">Frontend Developer</p>
                     <div className="text-gray-400 text-sm mt-1">Available for Freelance & Full-time Opportunities</div>
                   </div>
                 </div>
