@@ -8,8 +8,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import useWeb3Forms from '@web3forms/react';
-
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
@@ -32,48 +30,35 @@ const ContactSection: React.FC = () => {
       message: ''
     }
   });
-
-  const { submit: submitWeb3Form } = useWeb3Forms({
-    access_key: 'e99b466d-e31a-4dfe-9e20-188a24f69b8c',
-    settings: {
-      from_name: 'Megharaj Portfolio Contact',
-      subject: 'New Contact Form Submission',
-      to_email: 'megharajdandgavhal2004@gmail.com' // Make sure emails go to your email
-    },
-    onSuccess: (successMessage) => {
-      console.log("Form submitted successfully", successMessage);
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
-        variant: "default",
-      });
-      form.reset();
-      setIsSubmitting(false);
-    },
-    onError: (errorMessage) => {
-      console.error("Error submitting form:", errorMessage);
-      toast({
-        title: "Error",
-        description: "There was a problem sending your message. Please try again.",
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-    }
-  });
   
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     
     try {
-      const formData = {
-        ...data,
-        access_key: 'e99b466d-e31a-4dfe-9e20-188a24f69b8c',
-        from_name: data.name,
-        botcheck: '',
-      };
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      });
       
-      console.log("Submitting form with data:", formData);
-      await submitWeb3Form(formData);
+      const result = await response.json();
+      
+      if (result.success) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for your message. I'll get back to you soon.",
+          variant: "default",
+        });
+        form.reset();
+      } else {
+        toast({
+          title: "Error",
+          description: result.message || "There was a problem sending your message. Please try again.",
+          variant: "destructive",
+        });
+      }
     } catch (error) {
       console.error("Error in form submission:", error);
       toast({
@@ -81,6 +66,7 @@ const ContactSection: React.FC = () => {
         description: "There was a problem sending your message. Please try again.",
         variant: "destructive",
       });
+    } finally {
       setIsSubmitting(false);
     }
   };
