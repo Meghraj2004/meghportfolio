@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ResumeComponent from '../assets/ResumeComponent';
 
 const AboutSection: React.FC = () => {
   const variants = {
@@ -34,6 +35,14 @@ const AboutSection: React.FC = () => {
             <p className="text-gray-300 mb-6 leading-relaxed">
               I'm dedicated to developing innovative solutions that make a difference in people's lives. With hands-on experience in web development and a solid foundation in various programming languages and frameworks, I aim to create impactful technology that solves real problems.
             </p>
+            
+            <div className="bg-background-card rounded-xl p-6 border border-gray-800 mb-6 border-glow">
+              <h3 className="text-lg font-bold text-white mb-4 text-shimmer">My Resume</h3>
+              <p className="text-gray-300 mb-4">
+                Download my comprehensive resume to learn more about my skills, experiences, and qualifications as a Frontend Developer.
+              </p>
+              <ResumeComponent className="w-full md:w-auto" />
+            </div>
           </motion.div>
           
           <motion.div 
