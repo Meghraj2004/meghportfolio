@@ -1,6 +1,6 @@
 
 import { Github, Linkedin, ExternalLink, Mail, Phone, MapPin, } from 'lucide-react';
-import resume from "../asseets/resu_April.pdf"
+import resume from "../assets/Megharaj_Dandgavhal_Resume.pdf";
 import heropic from "../asseets/heropic.jpg"
 import { FaHackerrank } from "react-icons/fa";
 
