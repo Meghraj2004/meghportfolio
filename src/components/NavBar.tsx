@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import resume from "../asseets/resu_April.pdf";
+import resume from "../assets/Megharaj_Dandgavhal_Resume.pdf";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
