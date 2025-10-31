@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
             <div className="bg-background-card rounded-xl p-6 border border-gray-800 mb-6 border-glow">
               <h3 className="text-lg font-bold text-white mb-4 text-shimmer">My Resume</h3>
               <p className="text-gray-300 mb-4">
-                Download my comprehensive resume to learn more about my skills, experiences, and qualifications as a Frontend Developer.
+                Download my comprehensive resume to learn more about my skills, experiences, and qualifications as a Full-stack Developer.
               </p>
               <ResumeComponent className="w-full md:w-auto" />
             </div>
