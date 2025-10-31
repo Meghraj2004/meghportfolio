@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import resume from "../assets/Megharaj_Dandgavhal_Resume.pdf";
 
 interface ResumeComponentProps {
   className?: string;
@@ -12,7 +13,7 @@ const ResumeComponent: React.FC<ResumeComponentProps> = ({ className = '' }) => 
     
     // Create a download link
     const link = document.createElement('a');
-    link.href = '/assets/MegharajDandgavhal_Resume.pdf';
+    link.href = resume;
     link.setAttribute('download', 'MegharajDandgavhal_Resume.pdf');
     
     // Trigger the download

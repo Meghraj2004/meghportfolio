@@ -45,30 +45,7 @@ const AchievementSection: React.FC = () => {
       bgColor: "bg-blue-500/20",
       textColor: "text-blue-500"
     },
-    {
-      title: "Smart India Hackathon Finalist",
-      period: "2023",
-      description: "Selected as a finalist in Smart India Hackathon, presenting an innovative solution for smart city infrastructure management and optimization.",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-        </svg>
-      ),
-      bgColor: "bg-red-500/20",
-      textColor: "text-red-500"
-    },
-    {
-      title: "Certificate of Excellence, CodeFest",
-      period: "2023",
-      description: "Awarded for exceptional problem-solving skills and innovative programming solutions in the annual CodeFest competition.",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-        </svg>
-      ),
-      bgColor: "bg-purple-500/20",
-      textColor: "text-purple-500"
-    }
+    
   ];
 
   const certifications: Certification[] = [
@@ -108,42 +85,7 @@ const AchievementSection: React.FC = () => {
       bgColor: "bg-blue-500/20",
       textColor: "text-blue-500"
     },
-    {
-      title: "React & Node.js Development",
-      provider: "Udemy",
-      description: "Advanced web application development using React.js and Node.js frameworks. Building modern, responsive single-page applications.",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-      ),
-      bgColor: "bg-teal-500/20",
-      textColor: "text-teal-500"
-    },
-    {
-      title: "Database Design & SQL Mastery",
-      provider: "Microsoft",
-      description: "Comprehensive training in database design principles, normalization, and advanced SQL for efficient data management and retrieval.",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-        </svg>
-      ),
-      bgColor: "bg-indigo-500/20",
-      textColor: "text-indigo-500"
-    },
-    {
-      title: "UI/UX Design Fundamentals",
-      provider: "Coursera",
-      description: "Principles of user interface and experience design for creating intuitive, accessible, and aesthetically pleasing digital products.",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-      ),
-      bgColor: "bg-pink-500/20",
-      textColor: "text-pink-500"
-    }
+   
   ];
 
   const sectionVariants = {

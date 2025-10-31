@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import resume from "../assets/Megharaj_Dandgavhal_Resume.pdf";
+
 
 const NavBar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -63,7 +65,7 @@ const NavBar: React.FC = () => {
               </a>
             ))}
             <a 
-              href="/assets/MegharajDandgavhal_Resume.pdf" 
+              href={resume} 
               target="_blank"
               rel="noopener noreferrer"
               download="MegharajDandgavhal_Resume.pdf"
@@ -112,7 +114,7 @@ const NavBar: React.FC = () => {
             ))}
             
             <a 
-              href="/assets/MegharajDandgavhal_Resume.pdf" 
+              href={resume}
               target="_blank"
               rel="noopener noreferrer"
               download="MegharajDandgavhal_Resume.pdf"
