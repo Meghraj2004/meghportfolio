@@ -43,8 +43,8 @@ const ProjectsSection: React.FC = () => {
           <circle cx="590" cy="200" r="30" fill="#F59E0B" />
         </svg>
       ),
-      repoUrl: 'https://github.com/Meghraj2004/stockease-nexus',
-      demoUrl: 'https://stockease.onrender.com/'
+      repoUrl: 'https://github.com/Meghraj2004/StockEase-version-4',
+      demoUrl: 'https://stockeaseinv.netlify.app/'
     },
     {
       title: 'EduPath Pro',
@@ -68,8 +68,8 @@ const ProjectsSection: React.FC = () => {
           <path d="M 250 150 L 400 150 M 400 150 L 550 150" stroke="#6B7280" strokeWidth="3" />
         </svg>
       ),
-      repoUrl: 'https://github.com/Meghraj2004/edupath-pro',
-      demoUrl: 'https://edupath-pro.vercel.app'
+      repoUrl: 'https://github.com/Meghraj2004/edupath-pro-v3',
+      demoUrl: 'https://edupathpro.vercel.app/'
     },
     {
       title: 'MessMate Smart Hub',
@@ -97,8 +97,8 @@ const ProjectsSection: React.FC = () => {
           <rect x="400" y="230" width="150" height="40" rx="5" fill="#10B981" />
         </svg>
       ),
-      repoUrl: 'https://github.com/Meghraj2004/messmate-hub',
-      demoUrl: 'https://messmate-hub.vercel.app'
+      repoUrl: 'https://github.com/Meghraj2004/Mess-Mates-v4',
+      demoUrl: 'https://github.com/Meghraj2004/Mess-Mates-v4'
     },
     {
       title: 'MensFyt',
