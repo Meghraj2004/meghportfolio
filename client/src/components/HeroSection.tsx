@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
               Hi, I'm <span className="text-primary-light text-shimmer">Megharaj Dandgavhal</span>
             </h1>
             <p className="text-xl text-gray-400 mb-8 max-w-2xl">
-              Passionate about <span className="text-primary-light font-medium border-glow px-2 py-1 rounded-md">frontend development</span> and creating interactive web experiences.
+              Passionate about <span className="text-primary-light font-medium border-glow px-2 py-1 rounded-md">Full-stack development</span> and creating interactive web experiences.
             </p>
 
             <div className="flex items-center space-x-4 mb-8">

@@ -274,7 +274,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div className="text-center sm:text-left">
                   <h3 className="text-xl font-bold text-white">Megharaj Dandgavhal</h3>
-                  <p className="text-primary-light text-shimmer">Frontend Developer</p>
+                  <p className="text-primary-light text-shimmer">Full-stack Developer</p>
                   <div className="text-gray-400 text-sm mt-1">Available for Freelance & Full-time Opportunities</div>
                 </div>
               </div>
