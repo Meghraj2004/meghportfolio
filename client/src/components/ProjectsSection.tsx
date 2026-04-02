@@ -18,6 +18,60 @@ interface Project {
 const ProjectsSection: React.FC = () => {
   const projects: Project[] = [
     {
+      title: 'SkillGap AI',
+      description: 'An AI-driven skill development platform designed to identify and bridge organizational skill gaps with specialized dashboards for managers and employees. Features personalized learning paths and dynamic PDF certificates.',
+      role: 'Full Stack Developer - Integrated Google Gemini API for dynamic learning paths. Built UI with React, TypeScript, and TailwindCSS. Developed REST API with Express.js and MongoDB. Implemented Socket.io for real-time alerts.',
+      tags: [
+        { name: 'TypeScript', color: 'text-blue-500', bgColor: 'bg-blue-600/20' },
+        { name: 'React', color: 'text-blue-400', bgColor: 'bg-blue-500/20' },
+        { name: 'Node.js', color: 'text-green-400', bgColor: 'bg-green-500/20' },
+        { name: 'MongoDB', color: 'text-green-500', bgColor: 'bg-green-600/20' },
+        { name: 'Gemini API', color: 'text-purple-400', bgColor: 'bg-purple-500/20' }
+      ],
+      image: (
+        <svg width="100%" height="100%" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
+          <title>SkillGap AI Platform</title>
+          <rect width="800" height="400" fill="#1E1E1E" />
+          <rect x="100" y="50" width="600" height="300" rx="10" fill="#272727" />
+          <circle cx="200" cy="200" r="40" fill="#3B82F6" />
+          <circle cx="400" cy="120" r="40" fill="#8B5CF6" />
+          <circle cx="600" cy="200" r="40" fill="#10B981" />
+          <path d="M 235 180 L 370 135 M 430 135 L 565 180" stroke="#6B7280" strokeWidth="3" strokeDasharray="5,5" />
+          <rect x="150" y="270" width="500" height="40" rx="5" fill="#374151" />
+        </svg>
+      ),
+      repoUrl: 'https://github.com/Megharaj170804/SkillGap-AI',
+      demoUrl: 'https://skill-gap-ai-phi.vercel.app/'
+    },
+    {
+      title: 'Vaani – Multilingual Voice AI Platform',
+      description: 'A multilingual voice AI agent platform enabling real-time speech conversations in English, Hindi, and Marathi with automatic transcript capture, live session management, and post-call AI analysis.',
+      role: 'Full Stack Developer - Integrated Gemini Live API for low-latency voice interactions. Designed admin panel for creating custom personas. Implemented offline-first session persistence and downloadable conversation reports.',
+      tags: [
+        { name: 'React', color: 'text-blue-400', bgColor: 'bg-blue-500/20' },
+        { name: 'Node.js', color: 'text-green-400', bgColor: 'bg-green-500/20' },
+        { name: 'Express.js', color: 'text-gray-400', bgColor: 'bg-gray-500/20' },
+        { name: 'Gemini API', color: 'text-purple-400', bgColor: 'bg-purple-500/20' }
+      ],
+      image: (
+        <svg width="100%" height="100%" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
+          <title>Vaani Voice AI</title>
+          <rect width="800" height="400" fill="#1E1E1E" />
+          <rect x="100" y="50" width="600" height="300" rx="10" fill="#272727" />
+          <rect x="375" y="120" width="50" height="100" rx="25" fill="#8B5CF6" />
+          <path d="M 330 170 Q 330 240 400 240 Q 470 240 470 170" stroke="#4B5563" strokeWidth="8" fill="none" />
+          <rect x="390" y="240" width="20" height="40" fill="#4B5563" />
+          <rect x="350" y="280" width="100" height="10" rx="5" fill="#4B5563" />
+          <rect x="250" y="150" width="10" height="40" rx="5" fill="#10B981" />
+          <rect x="280" y="130" width="10" height="80" rx="5" fill="#3B82F6" />
+          <rect x="510" y="130" width="10" height="80" rx="5" fill="#3B82F6" />
+          <rect x="540" y="150" width="10" height="40" rx="5" fill="#10B981" />
+        </svg>
+      ),
+      repoUrl: 'https://github.com/Megharaj170804/Vaani-AI-Agent',
+      demoUrl: 'https://vaani-rho.vercel.app/'
+    },
+    {
       title: 'StockEase Nexus Analytics',
       description: 'A comprehensive inventory and sales management system with web and mobile applications for real-time business monitoring, featuring stock alerts, analytics visualization, and cross-platform support.',
       role: 'Full Stack Developer - Built complete web dashboard using React and TypeScript with Firebase Firestore for real-time stock alerts. Integrated Firebase Authentication for secure, role-based access. Developed cross-platform mobile app using React Native for on-the-go inventory tracking. Implemented analytics visualization with Chart.js and responsive UI optimized for multiple devices.',
@@ -98,7 +152,7 @@ const ProjectsSection: React.FC = () => {
         </svg>
       ),
       repoUrl: 'https://github.com/Meghraj2004/Mess-Mates-v4',
-      demoUrl: 'https://github.com/Meghraj2004/Mess-Mates-v4'
+      demoUrl: 'https://messmates.vercel.app/'
     },
     {
       title: 'MensFyt',
@@ -125,52 +179,6 @@ const ProjectsSection: React.FC = () => {
       ),
       repoUrl: 'https://github.com/Meghraj2004/mensfyt',
       demoUrl: 'https://mensfyt.com/?srsltid=AfmBOooPgTyNZCdc-UlUGl2YSRbm5K_9KITJu28azFTudfp1Guf2TNZz'
-    },
-    {
-      title: 'Bookverse',
-      description: 'A modern web application that allows users to manage their personal book collections through a clean, intuitive interface with search, categorization, and tracking features.',
-      role: 'Full Stack Developer - Developed the frontend using React and Tailwind CSS, implemented user authentication with Firebase, managed state with React hooks, and created a RESTful backend.',
-      tags: [
-        { name: 'React', color: 'text-blue-400', bgColor: 'bg-blue-500/20' },
-        { name: 'Firebase', color: 'text-orange-400', bgColor: 'bg-orange-500/20' },
-        { name: 'TailwindCSS', color: 'text-cyan-400', bgColor: 'bg-cyan-500/20' },
-        { name: 'REST API', color: 'text-green-400', bgColor: 'bg-green-500/20' }
-      ],
-      image: (
-        <svg width="100%" height="100%" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
-          <title>Bookverse Collection Manager</title>
-          <rect width="800" height="400" fill="#1E1E1E" />
-          <rect x="100" y="50" width="600" height="300" rx="10" fill="#272727" />
-          <rect x="150" y="100" width="150" height="200" rx="5" fill="#374151" />
-          <rect x="320" y="100" width="150" height="200" rx="5" fill="#4B5563" />
-          <rect x="490" y="100" width="150" height="200" rx="5" fill="#374151" />
-        </svg>
-      ),
-      repoUrl: 'https://github.com/Meghraj2004/bookverse',
-      demoUrl: 'https://bookverse-wine.vercel.app'
-    },
-    {
-      title: 'Blogspace',
-      description: 'A full-stack blogging platform enabling users to create, edit, and manage blog posts with a modern and responsive design, featuring rich text editing and user authentication.',
-      role: 'Full Stack Developer - Built both frontend and backend components, implemented RESTful APIs with Express.js, integrated PostgreSQL database using Drizzle ORM, and designed a responsive UI with Tailwind CSS.',
-      tags: [
-        { name: 'React', color: 'text-blue-400', bgColor: 'bg-blue-500/20' },
-        { name: 'Express.js', color: 'text-gray-400', bgColor: 'bg-gray-500/20' },
-        { name: 'PostgreSQL', color: 'text-indigo-400', bgColor: 'bg-indigo-500/20' },
-        { name: 'TailwindCSS', color: 'text-cyan-400', bgColor: 'bg-cyan-500/20' }
-      ],
-      image: (
-        <svg width="100%" height="100%" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
-          <title>Blogspace Platform</title>
-          <rect width="800" height="400" fill="#1E1E1E" />
-          <rect x="100" y="50" width="600" height="300" rx="10" fill="#272727" />
-          <rect x="150" y="100" width="500" height="80" rx="5" fill="#374151" />
-          <rect x="150" y="200" width="500" height="100" rx="5" fill="#4B5563" />
-          <rect x="550" y="320" width="100" height="30" rx="5" fill="#1E40AF" />
-        </svg>
-      ),
-      repoUrl: 'https://github.com/Meghraj2004/blogspace',
-      demoUrl: 'https://blogspace-1-2af1.onrender.com/'
     }
   ];
 

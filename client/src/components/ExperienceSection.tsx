@@ -33,7 +33,7 @@ const ExperienceSection: React.FC = () => {
             <div className="pl-8 border-l-2 border-primary-light">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <h3 className="text-xl font-bold text-white">Intern - Full Stack Developer</h3>
-                <div className="text-primary-light font-medium mt-2 md:mt-0">August 2025 – Present</div>
+                <div className="text-primary-light font-medium mt-2 md:mt-0">August 2025 – February 2026</div>
               </div>
               
               <div className="flex flex-col md:flex-row md:items-center text-gray-400 mb-4">

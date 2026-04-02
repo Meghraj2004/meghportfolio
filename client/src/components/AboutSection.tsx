@@ -79,7 +79,7 @@ const AboutSection: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-bold text-white">B.Tech Information Technology</h3>
                   <p className="text-primary-light">Walchand Institute of Technology, Solapur</p>
-                  <div className="mt-2 text-gray-400">CGPA: 8.56</div>
+                  <div className="mt-2 text-gray-400">CGPA: 8.71</div>
                 </div>
               </div>
             </div>
