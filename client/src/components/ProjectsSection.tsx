@@ -97,8 +97,8 @@ const ProjectsSection: React.FC = () => {
           <circle cx="590" cy="200" r="30" fill="#F59E0B" />
         </svg>
       ),
-      repoUrl: 'https://github.com/Meghraj2004/StockEase-version-4',
-      demoUrl: 'https://stockeaseinv.netlify.app/'
+      repoUrl: 'https://github.com/Meghraj2004/StockEase-Final-Version',
+      demoUrl: 'https://stockeasefi.netlify.app/'
     },
     {
       title: 'EduPath Pro',
