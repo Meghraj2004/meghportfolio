@@ -36,28 +36,43 @@ const ContactSection: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
+      const payload = {
+        access_key: 'e99b466d-e31a-4dfe-9e20-188a24f69b8c',
+        subject: data.subject || 'New Contact Form Submission',
+        name: data.name,
+        email: data.email,
+        message: data.message,
+        from_name: data.name,
+        from_email: data.email,
+        reply_to: data.email,
+        to: 'megharajdandgavhal2004@gmail.com',
+        headers: {
+          'Reply-To': data.email
+        }
+      };
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(payload)
       });
 
       const result = await response.json();
 
       if (result.success) {
         toast({
-          title: "Message sent successfully!",
+          title: 'Message sent successfully!',
           description: "Thank you for your message. I'll get back to you soon.",
-          variant: "default",
+          variant: 'default'
         });
         form.reset();
       } else {
         toast({
-          title: "Error",
-          description: result.message || "There was a problem sending your message. Please try again.",
-          variant: "destructive",
+          title: 'Error',
+          description: result.message || 'There was a problem sending your message. Please try again.',
+          variant: 'destructive'
         });
       }
     } catch (error) {
@@ -144,7 +159,7 @@ const ContactSection: React.FC = () => {
                       <FormControl>
                         <Input
                           {...field}
-                          className="bg-background-surface border border-gray-700 rounded-lg py-3 px-4 text-white focus:text-black focus:ring-2 focus:ring-primary-light focus:border-primary-light h-12"
+                          className="bg-black border border-gray-700 rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-light focus:border-primary-light h-12"
                           placeholder="Enter your name"
                         />
                       </FormControl>
@@ -163,7 +178,7 @@ const ContactSection: React.FC = () => {
                         <Input
                           {...field}
                           type="email"
-                          className="bg-background-surface border border-gray-700 rounded-lg py-3 px-4 text-white focus:text-black focus:ring-2 focus:ring-primary-light focus:border-primary-light h-12"
+                          className="bg-black border border-gray-700 rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-light focus:border-primary-light h-12"
                           placeholder="Enter your email"
                         />
                       </FormControl>
@@ -181,7 +196,7 @@ const ContactSection: React.FC = () => {
                       <FormControl>
                         <Input
                           {...field}
-                          className="bg-background-surface border border-gray-700 rounded-lg py-3 px-4 text-white focus:text-black focus:ring-2 focus:ring-primary-light focus:border-primary-light h-12"
+                          className="bg-black border border-gray-700 rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-light focus:border-primary-light h-12"
                           placeholder="Enter subject"
                         />
                       </FormControl>
@@ -200,7 +215,7 @@ const ContactSection: React.FC = () => {
                         <Textarea
                           {...field}
                           rows={5}
-                          className="bg-background-surface border border-gray-700 rounded-lg py-3 px-4 text-white focus:text-black focus:ring-2 focus:ring-primary-light focus:border-primary-light resize-none"
+                          className="bg-black border border-gray-700 rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-light focus:border-primary-light resize-none"
                           placeholder="Your message here..."
                         />
                       </FormControl>
