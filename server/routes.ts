@@ -1,7 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import nodemailer from "nodemailer";
 import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
